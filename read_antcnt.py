@@ -17,7 +17,7 @@ from mne.io.utils import (_read_segments_file, _find_channels,_synthesize_stim_c
 from mne.io.constants import FIFF
 from mne.io.meas_info import _empty_info,create_info
 #from ..base import _BaseRaw, _check_update_montage
-from mne.io.base import _BaseRaw
+from mne.io.base import BaseRaw
 #from ...utils import logger, verbose, check_version, warn
 from mne.utils import logger, verbose, warn
 #from ...channels.montage import Montage
@@ -141,7 +141,7 @@ def read_raw_antcnt(input_fname, montage=None, eog=(), event_id=None,
 
 
 
-class RawANTCNT(_BaseRaw):
+class RawANTCNT(BaseRaw):
     """Raw object from ANT .cnt file.
     Parameters
     ----------
